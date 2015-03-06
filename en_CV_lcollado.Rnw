@@ -1,0 +1,143 @@
+\documentclass[11pt]{article}
+\usepackage[margin = 1in]{geometry}
+\usepackage[nottoc,notlof,notlot,numbib]{tocbibind}
+\usepackage{fancyhdr}
+\usepackage{manfnt}
+\usepackage{pgf}
+\usepackage{amsmath,amsthm,amssymb,natbib,graphicx}
+\usepackage{amsfonts}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\usepackage{bbm}
+\usepackage{float}
+\usepackage{mathrsfs} %mathscr{A}
+\usepackage{hyperref,graphicx}
+
+\usepackage{mathtools}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}{Lemma}[thm]
+\newtheorem{cor}{Corollary}[thm]
+\newtheorem{defi}{Definition}
+\newtheorem{conj}{Conjecture}
+\newtheorem{prop}{Proposition}
+\newtheorem{ex}{Example}
+\newtheorem{claim}{Claim}
+\newtheorem{fact}{Fact}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+%\usepackage[spanish]{babel}
+%\selectlanguage{spanish}
+\usepackage[utf8]{inputenc}
+
+%%%%%%%%%%%%%%%%%%%%%% some personal commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\pl}[1]{\texttt{#1}}
+\newcommand{\myurlshort}[2]{\href{http://#1}{{\textsf{#2}}}}
+
+%%%%%%%%%%%%%%%%%%%%%% headers and footers %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy} 
+\lhead{}\chead{}\rhead{}\lfoot{}\cfoot{\thepage}\rfoot{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% bibliography  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{plainnat}
+
+
+%%%%%%%%%%%%%%%%%%%%%%% opening %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\textbf{\emph{Curriculum vitae}}}
+\author{Leonardo Collado Torres}
+
+\begin{document}
+\maketitle
+
+\section{General Information}
+  \begin{description}
+  \item[Name] Leonardo Collado Torres
+  \item[Address] 615 N. Wolfe Street, Room E3032, Baltimore MD 21205-2179, United States
+  \item[Phone] (410) 955 - 0958
+  \item[Emails] \url{lcollado@jhsph.edu}
+  \end{description}
+
+\section{Studies}
+  \begin{description}
+  \item[2002-2005] Bicultural high school at the Technological Institute and of Superior Studies of Monterrey (ITESM) Campus Cuernavaca, grade avg: 97.8/100.
+  \item[2005-2009] Undergraduate on Genomic Sciences (LCG) from the National Autonomous University of Mexico (UNAM), grade avg: 9.71/10.
+  \item[2011-currently] PhD student at the Department of Biostatistics in the Johns Hopkins School of Public Health.
+  \end{description}
+  
+\section{Honors}
+  \begin{description}
+  \item[2005] Highest average in high school and awarded a 90\% scholarship to study the undergraduate at the ITESM private system.
+  \item[2009] Graduated with a Honorable Mention from the LCG-UNAM undergraduate program.
+  \end{description}
+
+\section{Laboratory and Work Experience}
+  \begin{description}
+  \item[2007 (January-February and June-August)] Undergraduate visitor in Roberto Kolter's lab under the tutelage of Elizabeth Shank at the Department of Microbiology and Molecular Genetics, Harvard, Boston, USA. Carried out screenings to identify bacteria that activate the production of exopolysaccharide through the activation of the gene tasA in \emph{Bacillus subtilis}. 
+  \item[2007 (August) - 2009 (June)] Undergraduate rotation in Guillermo D\'avila's lab on Evolutionary Genomics at the Center on Genomic Sciences (CCG)-UNAM, Cuernavaca, Mexico. Worked with Sur Herrera Paredes in determining the ecological groups of bacteriophages by developing a method based on codon distribution of all phage sequenced genomes.
+  \item[2009 (July) - 2011 (July)] Bioinformatician in Enrique Morett's lab at the Institute on Biotechnology (IBT)-UNAM, Cuernavaca, Mexico. Worked on the analyses of Illumina Genome Analyzer IIx data sets to identify the transcriptions start sites (TSSs) and transcription units (TUs) in \emph{Escherichia coli} and \emph{Geobacter sulfurreducens}. Developing the \emph{BacterialTranscription} Bioconductor package.
+  \item[2009 (July) - 2010 (July)] First scientific staff member at Winter Genomics, Cuernavaca, Mexico. Explored the wide range of applications with high-throughput sequencing data, set up the scientific base of this new company, carried out de novo genome assembly simulations, and assembled and annotated the bacteriophage \emph{phiVC8} genome.
+  \item[2010 (August) - 2011 (July)] Scientific executive at Winter Genomics, Cuernavaca, Mexico. Responsible for recruiting and hiring new personnel, overseeing and supervising nine bioinformaticians, training new employees, writing research reports and presenting them to colleagues, leading the analysis of a project to assemble de novo four \emph{Escherichia coli} strains, and organizing all scientific projects at Winter Genomics.
+  \item[2012 (August) - currently] Research assistant for Rafael Irizarry and Jeffrey Leek working with RNA-seq data. Biostatistics Department, Johns Hopkins School of Public Health, Baltimore, USA.
+  \end{description}
+  
+\section{Publications}
+  \begin{enumerate}
+  \item Gama-Castro S, Salgado H, Peralta-Gil M, Santos-Zavaleta A, Muñiz-Rascado L, Solano-Lira H, Jimenez-Jacinto V, Weiss V, Garc\'ia-Sotelo JS, L\'opez-Fuentes A, Porr\'on-Sotelo L, Alquicira-Hern\'andez S, Medina-Rivera A, Mart\'inez-Flores I, Alquicira-Hern\'andez K, Mart\'inez-Adame R, Bonavides-Mart\'inez C, Miranda-R\'ios J, Huerta AM, Mendoza-Vargas A, \textbf{Collado-Torres L}, Taboada B, Vega-Alvarado L, Olvera M, Olvera L, Grande R, Morett E, Collado-Vides J. \emph{RegulonDB version 7.0: transcriptional regulation of Escherichia coli K-12 integrated within genetic sensory response units (Gensor Units)}. Nucleic Acids Res. 2011 Jan;39(Database issue):D98–105.
+ \item Shank EA, Klepac-Ceraj V, \textbf{Collado-Torres L}, Powers GE, Losick R, Kolter R. \emph{Interspecies interactions that result in Bacillus subtilis forming biofilms are mediated mainly by members of its own genus}. Proc. Natl. Acad. Sci. U.S.A. 2011 Nov;108(48):E1236–1243.
+%  \item \emph{Identification, de novo genome assembly and characterization of the phiVC8 Vibrio cholerae bacteriophage}, A Sol\'is, \textbf{L Collado-Torres}, C Eslava. Manuscript in preparation. 2010.
+%  \item \emph{A highly reliable genomic view of transcription of Escherichia coli K12}, \textbf{L Collado-Torres}, A Mendoza-Vargas, J Collado-Vides, E Morett, \emph{et al}. Manuscript in preparation. 2010.
+%  \item \emph{BacterialTranscription Bioconductor package}, \textbf{L Collado-Torres}, C Vargas-Ch\'avez, B Taboada, A Reyes-Quiroz, G Cu\'ellar-Partida, V Moreno-Mayar, J Collado-Vides. Package in preparation. 2010.
+  \end{enumerate}
+  
+\section{Courses and Meetings Attendance}
+  \begin{description}
+  \item[2005 (April 18-21)] \emph{HUGO 2005}, Kyoto, Japan.
+  \item[2006 (February 7-10)] \emph{Winter School in Genomics}, CCG-UNAM, Cuernavaca, Mexico.
+  \item[2007 (June 18-20)] \emph{Retreat of the Department of Microbiology and Molecular Genetics - Harvard}, Boston, USA.
+  \item[2007 (June 21-22)] \emph{Boston Bacterial Meeting}, Boston, USA.
+  \item[2008 (January 21-25)] \emph{A Short R/Bioconductor Course} by James Bullard from UC Berkeley, LCG-UNAM, Cuernavaca, Mexico.
+  \item[2008 (July 28-30)] \emph{BioC2008} on R/Bioconductor at the Fred Hutchinson Cancer Research Center (FHCRC), Seattle, USA.
+  \item[2009 (June-July)] Course on Oral Communication taught by the master Rafael Popoca, CCG-UNAM, Cuernavaca, Mexico.
+  \item[2009 (July 27-29)] \emph{BioC2009} on R/Bioconductor, FHCRC, Seattle, USA.
+  \item[2010 (July 28-30)] \emph{BioC2010} on R/Bioconductor, FHCRC, Seattle, USA.
+  \item[2010 (November 13-16)] \emph{From Functional Genomics to Systems Biology}, EMBL, Heidelberg, Germany.
+  \item[2010 (November 17-18)] \emph{Bioconductor Developer Meeting}, EMBL, Heidelberg, Germany.
+  \item[2011 (July 27-29)] \emph{BioC2011} on R/Bioconductor, FHCRC, Seattle, USA.
+  \end{description}
+  
+\section{Presentations in Conferences}
+  \begin{description}
+  \item[2010 (July)] \emph{Global Analysis of Transcription Start Sites (TSSs) and Transcription Units (TUs) in Bacterial Genomes}, \textbf{L Collado-Torres}, A Reyes-Quiroz, G Cu\'ellar-Partida, V Moreno-Mayar, B Taboada, L Vega-Alvarado, V Jim\'enez-Jacinto, A Mendoza-Vargas, R Grande, L Olvera, M Olvera, C Vargas-Ch\'avez, K Júarez, J Collado-Vides, E Morett. At \emph{BioC2010}, FHCRC, USA. (Poster)
+  \item[2010 (November)] \emph{Global Analysis of Transcription Start Sites and Transcription Units in Bacterial Genomes}, \textbf{L Collado-Torres}, A Reyes-Quiroz, G Cu\'ellar-Partida, V Moreno-Mayar, B Taboada, L Vega-Alvarado, V Jim\'enez-Jacinto, A Mendoza-Vargas, R Grande, L Olvera, M Olvera, C Vargas-Ch\'avez, K Júarez, J Collado-Vides, E Morett. At \emph{From Functional Genomics to Systems Biology}, EMBL, Germany. (Poster)
+  \item[2010 (November)] \emph{BacterialTranscription: a Bioconductor package to identify Transcription Start Sites (TSSs) and Transcription Units (TUs)}, \textbf{L Collado-Torres}, A Reyes-Quiroz, G Cu\'ellar-Partida, V Moreno-Mayar, C Vargas-Ch\'avez, J Collado-Vides. At \emph{Bioconductor Developer Meeting}, EMBL, Germany. (Oral presentation)
+  \end{description}
+  
+\section{Teaching Experience}
+  \begin{description}
+  \item[2008 (October-November)] Teaching assistant for \emph{Bioinformatics and Statistics I}. Taught R/Bioconductor to LCG's fourth class and created a website available at: \\ \url{http://www.lcg.unam.mx/~lcollado/R/}
+  \item[2009 (February-June)] Teaching assistant for \emph{Principles of Statistics}. Taught R to LCG's sixth class and created a website available at: \\ \url{http://www.lcg.unam.mx/~lcollado/E/}
+  \item[2009 (August-December)] Instructed \emph{Seminar III: R/Bioconductor}. Taught Bioconductor to LCG's sixth class. Trained three fifth class students to inherit the R/Bioconductor program at LCG. \\ Available at \url{http://www.lcg.unam.mx/~lcollado/B/}
+  \item[2009 (October-December)] Organized the course \emph{Introduction to Bioinformatics} for Morett's lab and served as instructor for a \emph{Introduction to R and plotting with R} module, IBT-UNAM, Cuernavaca, Mexico. \\ Available at \url{http://www.biostat.jhsph.edu/~lcollado/mIntroR.html}
+  \item[2010 (January 18-22)] Organized and gave a lecture for the course on \emph{Statistical Methods and Analysis of Genomic Data}, IBT-UNAM, Cuernavaca, Mexico. \\ Available at \url{http://www.biostat.jhsph.edu/~lcollado/MEyAdDG.html}
+  \item[2010 (May-June)] Instructed the \emph{Introduction to R and plotting with R} course for Morett's lab, IBT-UNAM, Cuernavaca, Mexico.
+  \item[2010 (August 2-6)] Instructed the \emph{Introduction to Using Bioconductor for High-Throughput Sequencing Analysis} practice lab at the \emph{National Bioinformatics Week} (NNB), CCG-UNAM, Cuernavaca, Mexico. \\ Available at \url{http://www.biostat.jhsph.edu/~lcollado/publications.html}
+  \item[2010 (August-December)] Instructed the course \emph{Analysis of High-Throughput Sequencing data with Bioconductor} at the Biomedical Sciences PhD Program (PDCB-UNAM), Cuernavaca, Mexico. \\ Available at \url{http://www.biostat.jhsph.edu/~lcollado/PDCB-HTS.html}
+  \item[2011 (February-June)] Invited instructor for the course \emph{Introduction to R and Biostatistics} at PDCB-UNAM, Cuernavaca, Mexico. \\ Available at \url{http://www.biostat.jhsph.edu/~lcollado/PDCB-Biostats.html}
+  \end{description}
+
+\section{Other}
+  \begin{description}
+  \item[2008 (September) - 2009 (June)] Elected representant of LCG's Third Generation at the LCG Academic Committee.
+  \item[2008 (February) - 2009 (June)] Representant of LCG's Third Generation at the Administration Unit for Technology Information (UATI)-LCG-UNAM.
+  \item[2008] Helped set up the online forums for the National Node of Bioinformatics website at \\ \url{http://foros.nnb.unam.mx/}
+  \item[2009 (June) - currently] Frequent visitor and forum poster at the SEQanswers forum \\ \url{http://seqanswers.com/forums/}
+  \end{description}
+
+\section{Languages}
+  \begin{description}
+  \item[Spanish - native language] I speak it, I read it, I write it.
+  \item[English - completely bilingual] I speak it, I read it, I write it.
+  \item[French - fluent] I speak it, I read it, I write it.
+  \end{description}
+
+\end{document}
