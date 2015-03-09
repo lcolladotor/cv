@@ -51,23 +51,11 @@
 \begin{document}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
-\makecvtitle
+%\makecvtitle
 
-\input{education.tex}
-\input{honors.tex}
-\input{experience.tex}
 \input{pubList.tex}
-
-\section{Referee for}
-\cvitem{2013-2014}{Biostatistics}
-
-\input{presentations.tex}
-\input{courses.tex}
-\input{software.tex}
-\input{computer.tex}
-\input{teaching.tex}
-\input{languages.tex}
-\input{other.tex}
+\subsection{In prep}
+\cvitem{2015}{\textbf{Collado-Torres L}, Jaffe AE, Leek JT. regionReport: Interactive reports for annotation agnostic RNA-seq differential expression analyses}
 
 \end{document}
 
