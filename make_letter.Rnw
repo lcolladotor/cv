@@ -51,23 +51,10 @@
 \begin{document}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
-\makecvtitle
+%\makecvtitle
 
-\input{education.tex}
-\input{honors.tex}
-\input{experience.tex}
-\input{pubList.tex}
-
-\section{Referee for}
-\cvitem{2013-2014}{Biostatistics}
-
-\input{presentations.tex}
-\input{teaching.tex}
-\input{courses.tex}
-\input{software.tex}
-\input{computer.tex}
-\input{languages.tex}
-\input{other.tex}
+\thispagestyle{empty}
+\input{letter.tex}
 
 \end{document}
 
