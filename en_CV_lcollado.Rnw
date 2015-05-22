@@ -59,6 +59,7 @@
 \input{pubList.tex}
 
 \section{Referee for}
+\cvitem{2015}{Bioinformatics}
 \cvitem{2013-2014}{Biostatistics}
 
 \input{presentations.tex}
