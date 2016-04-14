@@ -1,11 +1,7 @@
 ---
 output:
   html_document:
-    theme: united
-  knitrBootstrap::bootstrap_document:
-    theme.chooser: TRUE
-    highlight.chooser: TRUE
-  
+    theme: spacelab
 ---
 
 [L. Collado-Torres](http://bit.ly/LColladoTorres) Curriculum vitae
