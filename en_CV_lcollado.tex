@@ -102,9 +102,15 @@
 %----------------------------------------------------------------------------------
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
+\pagestyle{plain}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
+
+
+
+
+
 
 \input{education.tex}
 \input{honors.tex}
@@ -114,6 +120,13 @@
 \input{service.tex}
 \input{presentations.tex}
 \input{courses.tex}
+\section{Software}
+\subsection{Bioconductor -- main author}
+\cvitem{2014}{\httplink[derfinder]{bioconductor.org/packages/derfinder}: Annotation-agnostic differential expression analysis of RNA-seq data at base-pair resolution via the DER Finder approach -- 5078 downloads.}
+\cvitem{2014}{\httplink[derfinderPlot]{bioconductor.org/packages/derfinderPlot}: plotting functions for derfinder results -- 3975 downloads.}
+\cvitem{2014}{\httplink[regionReport]{bioconductor.org/packages/regionReport}: Generate HTML or PDF reports for a set of genomic regions or DESeq2/edgeR results -- 3719 downloads.}
+\cvitem{2014}{\httplink[derfinderHelper]{bioconductor.org/packages/derfinderHelper}: helper functions for derfinder package -- 4558 downloads.}
+\cvitem{2014}{\httplink[derfinderData]{bioconductor.org/packages/derfinderData}: data for derfinder examples -- 562 downloads in past 12 months.}
 \input{software.tex}
 \input{computer.tex}
 \input{teaching.tex}

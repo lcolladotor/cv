@@ -52,9 +52,23 @@
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
+\pagestyle{plain}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
+
+<<setup, echo = FALSE>>=
+library(knitr)
+@
+
+<<'getStats', echo=FALSE>>=
+getDownloads <- function(pkg) {
+    info <- read.table(paste0('https://bioconductor.org/packages/stats/bioc/',
+        pkg, '/', pkg, '_stats.tab'), header = TRUE)
+    sum(info$Nb_of_downloads[info$Month == 'all'])
+}
+@
+
 
 \input{education.tex}
 \input{honors.tex}
@@ -64,6 +78,13 @@
 \input{service.tex}
 \input{presentations.tex}
 \input{courses.tex}
+\section{Software}
+\subsection{Bioconductor -- main author}
+\cvitem{2014}{\httplink[derfinder]{bioconductor.org/packages/derfinder}: Annotation-agnostic differential expression analysis of RNA-seq data at base-pair resolution via the DER Finder approach -- \Sexpr{getDownloads('derfinder')} downloads.}
+\cvitem{2014}{\httplink[derfinderPlot]{bioconductor.org/packages/derfinderPlot}: plotting functions for derfinder results -- \Sexpr{getDownloads('derfinderPlot')} downloads.}
+\cvitem{2014}{\httplink[regionReport]{bioconductor.org/packages/regionReport}: Generate HTML or PDF reports for a set of genomic regions or DESeq2/edgeR results -- \Sexpr{getDownloads('regionReport')} downloads.}
+\cvitem{2014}{\httplink[derfinderHelper]{bioconductor.org/packages/derfinderHelper}: helper functions for derfinder package -- \Sexpr{getDownloads('derfinderHelper')} downloads.}
+\cvitem{2014}{\httplink[derfinderData]{bioconductor.org/packages/derfinderData}: data for derfinder examples -- 562 downloads in past 12 months.}
 \input{software.tex}
 \input{computer.tex}
 \input{teaching.tex}
