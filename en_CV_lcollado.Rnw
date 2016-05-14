@@ -62,9 +62,14 @@ library(knitr)
 @
 
 <<'getStats', echo=FALSE>>=
-getDownloads <- function(pkg) {
-    info <- read.table(paste0('https://bioconductor.org/packages/stats/bioc/',
+getDownloads <- function(pkg, data = FALSE) {
+    if(data) {
+        info <- read.table(paste0('https://bioconductor.org/packages/stats/data-experiment/',
         pkg, '/', pkg, '_stats.tab'), header = TRUE)
+    } else {
+        info <- read.table(paste0('https://bioconductor.org/packages/stats/bioc/',
+        pkg, '/', pkg, '_stats.tab'), header = TRUE)
+    }
     sum(info$Nb_of_downloads[info$Month == 'all'])
 }
 @
@@ -84,7 +89,7 @@ getDownloads <- function(pkg) {
 \cvitem{2014}{\httplink[derfinderPlot]{bioconductor.org/packages/derfinderPlot}: plotting functions for derfinder results -- \Sexpr{getDownloads('derfinderPlot')} downloads.}
 \cvitem{2014}{\httplink[regionReport]{bioconductor.org/packages/regionReport}: Generate HTML or PDF reports for a set of genomic regions or DESeq2/edgeR results -- \Sexpr{getDownloads('regionReport')} downloads.}
 \cvitem{2014}{\httplink[derfinderHelper]{bioconductor.org/packages/derfinderHelper}: helper functions for derfinder package -- \Sexpr{getDownloads('derfinderHelper')} downloads.}
-\cvitem{2014}{\httplink[derfinderData]{bioconductor.org/packages/derfinderData}: data for derfinder examples -- 562 downloads in past 12 months.}
+\cvitem{2014}{\httplink[derfinderData]{bioconductor.org/packages/derfinderData}: data for derfinder examples -- \Sexpr{getDownloads('derfinderData', TRUE)} downloads.}
 \input{software.tex}
 \input{computer.tex}
 \input{teaching.tex}
