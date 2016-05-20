@@ -51,8 +51,21 @@
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
+
+\topmargin=0.05in
+\textheight=8.15in
+\textwidth=5.6in
+\oddsidemargin=0.7in
+\raggedbottom
+\newdimen \jot \jot=5mm
+\brokenpenalty=10000
+
 \begin{document}
 \pagestyle{plain}
+\pagenumbering{arabic}
+\setcounter{page}{112}
+\cfoot{\thepage}
+
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
