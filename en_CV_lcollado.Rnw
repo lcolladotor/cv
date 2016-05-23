@@ -63,7 +63,7 @@
 \begin{document}
 \pagestyle{plain}
 \pagenumbering{arabic}
-\setcounter{page}{112}
+\setcounter{page}{111}
 \cfoot{\thepage}
 
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
