@@ -32,7 +32,7 @@
 \phone[fixed]{+1~(410)~955~1000}                    % optional, remove / comment the line if not wanted
 %\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
 \email{leo.collado@libd.org}                               % optional, remove / comment the line if not wanted
-\homepage{http://lcolladotor.github.io/about.html}                         % optional, remove / comment the line if not wanted
+\homepage{http://lcolladotor.github.io/}                         % optional, remove / comment the line if not wanted
 %\extrainfo{Blog: http://lcolladotor.github.io/}                 % optional, remove / comment the line if not wanted
 \social[twitter]{fellgernon}
 \social[github]{lcolladotor}
