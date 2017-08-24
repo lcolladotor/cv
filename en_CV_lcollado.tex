@@ -6,7 +6,7 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[11pt,letterpaper,sans]{moderncv}\usepackage[]{graphicx}\usepackage[]{color}
+\documentclass[11pt,letterpaper,sans,colorlinks,linkcolor=true]{moderncv}\usepackage[]{graphicx}\usepackage[]{color}
 %% maxwidth is the original width if it is less than linewidth
 %% otherwise use linewidth (to make sure the graphics do not exceed the margin)
 \makeatletter
@@ -75,6 +75,7 @@
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
+
 % personal data
 \name{Leonardo}{Collado-Torres}
 %\title{Resumé title}                               % optional, remove / comment the line if not wanted
@@ -112,6 +113,12 @@
 \brokenpenalty=10000
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
+
+%% https://tex.stackexchange.com/questions/275848/changing-moderncv-link-color-of-href
+%% https://en.wikibooks.org/wiki/LaTeX/Colors
+\definecolor{links}{HTML}{FF7F00}
+\hypersetup{urlcolor=links}
+
 %\pagestyle{plain}
 %\pagenumbering{arabic}
 %\setcounter{page}{118}
@@ -136,12 +143,12 @@
 \input{courses.tex}
 \section{Software}
 \subsection{Bioconductor -- main author}
-\cvitem{2016}{\httplink[recount]{bioconductor.org/packages/recount}: Explore and download data from the recount project -- 2299 downloads.}
-\cvitem{2014}{\httplink[derfinder]{bioconductor.org/packages/derfinder}: Annotation-agnostic differential expression analysis of RNA-seq data at base-pair resolution via the DER Finder approach -- 9496 downloads.}
-\cvitem{2014}{\httplink[derfinderPlot]{bioconductor.org/packages/derfinderPlot}: plotting functions for derfinder results -- 6303 downloads.}
-\cvitem{2014}{\httplink[regionReport]{bioconductor.org/packages/regionReport}: Generate HTML or PDF reports for a set of genomic regions or DESeq2/edgeR results -- 6437 downloads.}
-\cvitem{2014}{\httplink[derfinderHelper]{bioconductor.org/packages/derfinderHelper}: helper functions for derfinder package -- 8219 downloads.}
-\cvitem{2014}{\httplink[derfinderData]{bioconductor.org/packages/derfinderData}: data for derfinder examples -- 1471 downloads.}
+\cvitem{2016}{\httplink[recount]{bioconductor.org/packages/recount}: Explore and download data from the recount project -- 3270 downloads.}
+\cvitem{2014}{\httplink[derfinder]{bioconductor.org/packages/derfinder}: Annotation-agnostic differential expression analysis of RNA-seq data at base-pair resolution via the DER Finder approach -- 10753 downloads.}
+\cvitem{2014}{\httplink[derfinderPlot]{bioconductor.org/packages/derfinderPlot}: plotting functions for derfinder results -- 6769 downloads.}
+\cvitem{2014}{\httplink[regionReport]{bioconductor.org/packages/regionReport}: Generate HTML or PDF reports for a set of genomic regions or DESeq2/edgeR results -- 7058 downloads.}
+\cvitem{2014}{\httplink[derfinderHelper]{bioconductor.org/packages/derfinderHelper}: helper functions for derfinder package -- 9163 downloads.}
+\cvitem{2014}{\httplink[derfinderData]{bioconductor.org/packages/derfinderData}: data for derfinder examples -- 1558 downloads.}
 \input{software.tex}
 \input{computer.tex}
 \input{teaching.tex}
