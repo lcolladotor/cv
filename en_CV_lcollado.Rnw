@@ -97,6 +97,9 @@ getDownloads <- function(pkg, data = FALSE) {
 
 
 \input{education.tex}
+
+% \httplink[Full CV available at his website.]{lcolladotor.github.io/cv}
+
 \input{honors.tex}
 \input{experience.tex}
 \input{pubList.tex}
