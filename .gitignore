@@ -4,3 +4,8 @@ spanish
 summary
 dandavid.tex
 framed.sty
+.Rproj.user
+.Rhistory
+*synctex*
+*concordance*
+*.log

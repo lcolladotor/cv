@@ -63,6 +63,7 @@
 \brokenpenalty=10000
 
 \begin{document}
+\SweaveOpts{concordance=TRUE}
 
 %% https://tex.stackexchange.com/questions/275848/changing-moderncv-link-color-of-href
 %% https://en.wikibooks.org/wiki/LaTeX/Colors
@@ -114,7 +115,7 @@ getDownloads <- function(pkg, data = FALSE) {
 \cvitem{2014}{\httplink[derfinderPlot]{bioconductor.org/packages/derfinderPlot}: plotting functions for derfinder results -- \Sexpr{getDownloads('derfinderPlot')} downloads.}
 \cvitem{2014}{\httplink[regionReport]{bioconductor.org/packages/regionReport}: Generate HTML or PDF reports for a set of genomic regions or DESeq2/edgeR results -- \Sexpr{getDownloads('regionReport')} downloads.}
 \cvitem{2014}{\httplink[derfinderHelper]{bioconductor.org/packages/derfinderHelper}: helper functions for derfinder package -- \Sexpr{getDownloads('derfinderHelper')} downloads.}
-\cvitem{2014}{\httplink[derfinderData]{bioconductor.org/packages/derfinderData}: data for derfinder examples -- \Sexpr{getDownloads('derfinderData', TRUE)} downloads.}
+\cvitem{2014}{\httplink[derfinderData]{bioconductor.org/packages/derfinderData}: data for derfinder examples --2571 downloads.}
 \input{software.tex}
 \input{computer.tex}
 \input{teaching.tex}

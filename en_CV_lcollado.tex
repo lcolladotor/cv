@@ -6,57 +6,7 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[11pt,letterpaper,sans,colorlinks,linkcolor=true]{moderncv}\usepackage[]{graphicx}\usepackage[]{color}
-% maxwidth is the original width if it is less than linewidth
-% otherwise use linewidth (to make sure the graphics do not exceed the margin)
-\makeatletter
-\def\maxwidth{ %
-  \ifdim\Gin@nat@width>\linewidth
-    \linewidth
-  \else
-    \Gin@nat@width
-  \fi
-}
-\makeatother
-
-\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
-\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
-\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
-\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
-\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
-\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
-\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
-\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
-\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
-\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
-\let\hlipl\hlkwb
-
-\usepackage{framed}
-\makeatletter
-\newenvironment{kframe}{%
- \def\at@end@of@kframe{}%
- \ifinner\ifhmode%
-  \def\at@end@of@kframe{\end{minipage}}%
-  \begin{minipage}{\columnwidth}%
- \fi\fi%
- \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
- \colorbox{shadecolor}{##1}\hskip-\fboxsep
-     % There is no \\@totalrightmargin, so:
-     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
- \MakeFramed {\advance\hsize-\width
-   \@totalleftmargin\z@ \linewidth\hsize
-   \@setminipage}}%
- {\par\unskip\endMakeFramed%
- \at@end@of@kframe}
-\makeatother
-
-\definecolor{shadecolor}{rgb}{.97, .97, .97}
-\definecolor{messagecolor}{rgb}{0, 0, 0}
-\definecolor{warningcolor}{rgb}{1, 0, 1}
-\definecolor{errorcolor}{rgb}{1, 0, 0}
-\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
-
-\usepackage{alltt}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[11pt,letterpaper,sans,colorlinks,linkcolor=true]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv themes
 \moderncvstyle[shortrules]{banking}
@@ -111,8 +61,10 @@
 \raggedbottom
 \newdimen \jot \jot=5mm
 \brokenpenalty=10000
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+
+\usepackage{Sweave}
 \begin{document}
+\input{en_CV_lcollado-concordance}
 
 %% https://tex.stackexchange.com/questions/275848/changing-moderncv-link-color-of-href
 %% https://en.wikibooks.org/wiki/LaTeX/Colors
@@ -131,8 +83,6 @@
 
 
 
-
-
 \input{education.tex}
 
 % \httplink[Full CV available at his website.]{lcolladotor.github.io/cv}
@@ -146,12 +96,12 @@
 \input{courses.tex}
 \section{Software}
 \subsection{Bioconductor -- main author}
-\cvitem{2016}{\httplink[recount]{bioconductor.org/packages/recount}: Explore and download data from the recount project -- 16609 downloads.}
-\cvitem{2014}{\httplink[derfinder]{bioconductor.org/packages/derfinder}: Annotation-agnostic differential expression analysis of RNA-seq data at base-pair resolution via the DER Finder approach -- 24815 downloads.}
-\cvitem{2014}{\httplink[derfinderPlot]{bioconductor.org/packages/derfinderPlot}: plotting functions for derfinder results -- 11242 downloads.}
-\cvitem{2014}{\httplink[regionReport]{bioconductor.org/packages/regionReport}: Generate HTML or PDF reports for a set of genomic regions or DESeq2/edgeR results -- 12825 downloads.}
-\cvitem{2014}{\httplink[derfinderHelper]{bioconductor.org/packages/derfinderHelper}: helper functions for derfinder package -- 20436 downloads.}
-\cvitem{2014}{\httplink[derfinderData]{bioconductor.org/packages/derfinderData}: data for derfinder examples -- 2571 downloads.}
+\cvitem{2016}{\httplink[recount]{bioconductor.org/packages/recount}: Explore and download data from the recount project -- 17048 downloads.}
+\cvitem{2014}{\httplink[derfinder]{bioconductor.org/packages/derfinder}: Annotation-agnostic differential expression analysis of RNA-seq data at base-pair resolution via the DER Finder approach -- 25319 downloads.}
+\cvitem{2014}{\httplink[derfinderPlot]{bioconductor.org/packages/derfinderPlot}: plotting functions for derfinder results -- 11383 downloads.}
+\cvitem{2014}{\httplink[regionReport]{bioconductor.org/packages/regionReport}: Generate HTML or PDF reports for a set of genomic regions or DESeq2/edgeR results -- 13027 downloads.}
+\cvitem{2014}{\httplink[derfinderHelper]{bioconductor.org/packages/derfinderHelper}: helper functions for derfinder package -- 20814 downloads.}
+\cvitem{2014}{\httplink[derfinderData]{bioconductor.org/packages/derfinderData}: data for derfinder examples --2571 downloads.}
 \input{software.tex}
 \input{computer.tex}
 \input{teaching.tex}
