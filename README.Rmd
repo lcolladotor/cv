@@ -1,0 +1,21 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "figures/README-",
+  out.width = "100%"
+)
+```
+
+[L. Collado-Torres](http://lcolladotor.github.io/) Curriculum vitae
+================
+
+<iframe src="http://docs.google.com/viewer?url=http://lcolladotor.github.io/cv/en_CV_lcollado.pdf&amp;embedded=true" width="900" height="780" style="border: none;"></iframe>
+
+The previous CV is available [here](http://lcolladotor.github.io/cv/latex_version/en_CV_lcollado.pdf).

@@ -1,11 +1,11 @@
-make_letter.pdf
-make_letter.tex
+*/make_letter.*
 spanish
 summary
-dandavid.tex
-framed.sty
+*/dandavid.tex
+*/framed.sty
 .Rproj.user
 .Rhistory
 *synctex*
 *concordance*
 *.log
+nstrayer_cv

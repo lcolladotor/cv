@@ -1,10 +1,332 @@
 ---
+title: "Leonardo Collado-Torres's CV"
+author: Leonardo Collado-Torres
+date: "`r Sys.Date()`"
 output:
-  html_document:
-    theme: spacelab
+  pagedown::html_resume:
+    css: ['nstrayer_cv/css/styles.css', 'resume']
+    # set it to true for a self-contained HTML page but it'll take longer to render
+    self_contained: true
 ---
 
-[L. Collado-Torres](http://lcolladotor.github.io/) Curriculum vitae
-================
+```{r 'setup', include=FALSE}
+knitr::opts_chunk$set(
+  results='asis', 
+  echo = FALSE
+)
 
-<iframe src="http://docs.google.com/viewer?url=http://lcolladotor.github.io/cv/en_CV_lcollado.pdf&amp;embedded=true" width="900" height="780" style="border: none;"></iframe>
+library(glue)
+library(tidyverse)
+
+# ======================================================================
+# These variables determine how the the data is loaded and how the exports are
+# done.
+
+# Is data stored in google sheets? If no data will be gather from the csvs/
+# folder in project
+using_googlesheets <- TRUE
+
+# Just the copied URL from the sheet
+positions_sheet_loc <- "https://docs.google.com/spreadsheets/d/1fPY9wUeRcHWu5qijE4sZ8Xp6cGqasgdDNBJndmM3fBQ"
+
+# Is this sheet available for anyone to read? If you're using a private sheet
+# set this to false and go to gather_data.R and run the data loading manually
+# once to cache authentication
+sheet_is_publicly_readable <- TRUE
+
+# Is the goal of this knit to build a document that is exported to PDF? If so
+# set this to true to have links turned into footnotes at the end of the
+# document
+PDF_EXPORT <- FALSE
+
+
+CV_PDF_LOC <- "https://github.com/lcolladotor/cv/raw/master/en_CV_lcollado.pdf"
+CV_HTML_LOC <- "https://lcolladotor.github.com/cv/"
+
+
+# A global (gasp) variable that holds all the links that were inserted for
+# placement at the end
+links <- c()
+
+# ======================================================================
+# Now we source two external scripts. One contains functions for building the
+# text output and the other loads up our data from either googlesheets or csvs
+
+# Functions for building sections from CSV data
+source('nstrayer_cv/parsing_functions.R') 
+
+# Load data for CV/Resume
+source('nstrayer_cv/gather_data.R')
+```
+
+
+
+```{r 'fix_dots_pdf'}
+# When in export mode the little dots are unaligned, so fix that. 
+if(PDF_EXPORT){
+  cat("
+  <style>
+  :root{
+    --decorator-outer-offset-left: -6.5px;
+  }
+  </style>")
+}
+```
+
+
+Aside
+================================================================================
+
+
+![avatar](http://lcolladotor.github.io/authors/admin/avatar_hub02ca7f9e3655ab17e4aaab23e8769df_150735_270x270_fill_q90_lanczos_center.jpg){width=100%}
+
+```{r 'fix_dots_pdf_2'}
+# When in export mode the little dots are unaligned, so fix that. 
+if(PDF_EXPORT){
+  glue("View this CV online with links at _{CV_HTML_LOC}_")
+} else {
+  glue("[<i class='fas fa-download'></i> Download a PDF of this CV]({CV_PDF_LOC})")
+}
+```
+
+Contact {#contact}
+--------------------------------------------------------------------------------
+
+```{r 'contact_info'}
+contact_info %>% 
+  glue_data("- <i class='{iconpack} fa-{icon}'></i> {contact}")
+```
+
+
+
+Language Skills {#skills}
+--------------------------------------------------------------------------------
+
+```{r 'skill_bars'}
+build_skill_bars(skills)
+```
+
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). 
+
+The source code is available at [github.com/lcolladotor/cv](https://github.com/lcolladotor/cv) and is powered by [nstrayer/cv](https://github.com/nstrayer/cv).
+
+Last updated on `r Sys.Date()`.
+
+
+
+Main
+================================================================================
+
+Leonardo Collado-Torres {#title}
+--------------------------------------------------------------------------------
+
+```{r 'intro'}
+print_text_block(text_blocks, 'intro')
+```
+
+
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r 'education'}
+print_section(position_data, 'education')
+```
+
+<br>
+<br>
+<br>
+
+Research Experience {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+```{r 'work_research'}
+print_section(position_data, 'research_positions')
+```
+
+<br>
+<br>
+<br>
+
+Industry Experience {data-icon=suitcase}
+--------------------------------------------------------------------------------
+
+::: aside
+```{r 'work_industry_intro'}
+print_text_block(text_blocks, 'industy_experience_aside')
+```
+:::
+
+```{r 'work_industry'}
+print_section(position_data, 'industry_positions')
+```
+
+Honors and awards {data-icon=medal}
+--------------------------------------------------------------------------------
+
+```{r 'honors'}
+print_section(position_data, 'honors')
+```
+
+<!-- These breaks just force a new page so section doesnt get cut off -->
+<br>
+<br>
+<br>
+
+
+Publications {data-icon=book}
+--------------------------------------------------------------------------------
+
+:::aside
+$*$ indicates equal contribution, $\dagger$ indicates corresponding author
+:::
+
+```{r 'pubs'}
+position_data$description_1 <-
+  gsub(
+    'Collado-Torres L',
+    '__Collado-Torres L__',
+    gsub(
+      'L Collado-Torres',
+      '__L Collado-Torres__',
+      gsub(
+        'Leonardo Collado-Torres',
+        '__Leonardo Collado-Torres__',
+        position_data$description_1
+      )
+    )
+  )
+print_section(position_data, 'pubs')
+```
+
+
+
+
+Software {data-icon=book}
+--------------------------------------------------------------------------------
+
+:::aside
+* __all_purpose__: R, Ranked 220/8606 (top 2.5%) in the US and 799/72425 (top 1%) worldwide by [GitHub Awards](github-awards.com/users/lcolladotor) as of March 1st, 2020. Does not take into account contributions at GitHub organizations.
+* __statistics__: Stata
+* __scripting__: bash
+* __markup__: LaTeX, markdown
+* __OS__: Linux
+* __cluster queue__: Son of Grid Engine
+:::
+
+```{r 'getDownloads_fun', echo = FALSE}
+getDownloads <- function(pkg, data = FALSE) {
+    if(data) {
+        url <- paste0(
+            'https://bioconductor.org/packages/stats/data-experiment/',
+            pkg, '/', pkg, '_stats.tab'
+        )
+        
+    } else {
+        url <- paste0(
+            'https://bioconductor.org/packages/stats/bioc/',
+            pkg, '/', pkg, '_stats.tab'
+        )
+        
+    }
+    info <- tryCatch(
+        suppressWarnings(read.table(url, header = TRUE)),
+        error = function(e) {
+            return(data.frame(
+                Nb_of_downloads = NA,
+                'Month' = 'all'
+            ))
+        }
+    )
+    res <- sum(info$Nb_of_downloads[info$Month == 'all'])
+    ## In case the download stats are currently unavailable
+    if(is.na(res)) res <- paste0('(Not Available on ', Sys.Date(), ')')
+    return(res)
+}
+```
+
+### Bioconductor: author role
+
+[spatialLIBD](bioconductor.org/packages/LIBD): LIBD Visium spatial transcriptomics human pilot data inspector -- `r getDownloads('spatialLIBD')` downloads. [GenomicState](bioconductor.org/packages/GenomicState): data for derfinder analyses -- `r getDownloads('GenomicState', data = TRUE)` downloads. [recount](bioconductor.org/packages/recount): Explore and download data from the recount project -- `r getDownloads('recount')` downloads. [derfinder](bioconductor.org/packages/derfinder): Annotation-agnostic differential expression analysis of RNA-seq data at base-pair resolution via the DER Finder approach -- `r getDownloads('derfinder')` downloads. [derfinderPlot](bioconductor.org/packages/derfinderPlot): plotting functions for derfinder results -- `r getDownloads('derfinderPlot')` downloads. [regionReport](bioconductor.org/packages/regionReport): Generate HTML or PDF reports for a set of genomic regions or DESeq2/edgeR results -- `r getDownloads('regionReport')` downloads. [derfinderHelper](bioconductor.org/packages/derfinderHelper): helper functions for derfinder package -- `r getDownloads('derfinderHelper')` downloads. [derfinderData](bioconductor.org/packages/derfinderData): data for derfinder examples -- `r getDownloads('derfinderData', data = TRUE)` downloads.
+
+
+N/A
+
+2014 - 2020
+
+```{r 'software'}
+print_section(position_data, 'software')
+```
+
+Leadership and Service {data-icon=book}
+--------------------------------------------------------------------------------
+
+```{r 'service'}
+print_section(position_data, 'service')
+```
+
+Mentoring Experience {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+
+```{r 'mentoring'}
+print_section(position_data, 'mentoring')
+```
+
+
+Teaching Experience {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+::: aside
+```{r 'teaching_aside'}
+print_text_block(text_blocks, 'teaching_experience_aside')
+```
+:::
+
+```{r 'teaching'}
+print_section(position_data, 'teaching')
+```
+
+Courses, meetings, talks, and posters{data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+:::aside
+Most recent slides are available via [speakerdeck](www.speakerdeck.com/lcolladotor} or [slideshare](www.slideshare.com/lcolladotor}.
+:::
+
+```{r 'conf'}
+print_section(position_data, 'conf')
+```
+
+Languages {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+* Native: Spanish
+* Bilingual: English
+* Basic: French
+
+
+
+```{r 'more_pdf_stuff'}
+if(PDF_EXPORT){
+  cat("
+  
+Links {data-icon=link}
+--------------------------------------------------------------------------------
+
+<br>
+
+
+")
+  
+  walk2(links, 1:length(links), function(link, index){
+    print(glue('{index}. {link}'))
+  })
+}
+```
+
+
