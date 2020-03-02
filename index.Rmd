@@ -210,7 +210,7 @@ Software {data-icon=book}
 --------------------------------------------------------------------------------
 
 :::aside
-* __all_purpose__: R, Ranked 220/8606 (top 2.5%) in the US and 799/72425 (top 1%) worldwide by [GitHub Awards](github-awards.com/users/lcolladotor) as of March 1st, 2020. Does not take into account contributions at GitHub organizations.
+* __all_purpose__: R, Ranked 220/8606 (top 2.5%) in the US and 799/72425 (top 1%) worldwide by [GitHub Awards](http://github-awards.com/users/lcolladotor) as of March 1st, 2020. Does not take into account contributions at GitHub organizations.
 * __statistics__: Stata
 * __scripting__: bash
 * __markup__: LaTeX, markdown
@@ -251,7 +251,7 @@ getDownloads <- function(pkg, data = FALSE) {
 
 ### Bioconductor: author role
 
-[spatialLIBD](bioconductor.org/packages/LIBD): LIBD Visium spatial transcriptomics human pilot data inspector -- `r getDownloads('spatialLIBD')` downloads. [GenomicState](bioconductor.org/packages/GenomicState): data for derfinder analyses -- `r getDownloads('GenomicState', data = TRUE)` downloads. [recount](bioconductor.org/packages/recount): Explore and download data from the recount project -- `r getDownloads('recount')` downloads. [derfinder](bioconductor.org/packages/derfinder): Annotation-agnostic differential expression analysis of RNA-seq data at base-pair resolution via the DER Finder approach -- `r getDownloads('derfinder')` downloads. [derfinderPlot](bioconductor.org/packages/derfinderPlot): plotting functions for derfinder results -- `r getDownloads('derfinderPlot')` downloads. [regionReport](bioconductor.org/packages/regionReport): Generate HTML or PDF reports for a set of genomic regions or DESeq2/edgeR results -- `r getDownloads('regionReport')` downloads. [derfinderHelper](bioconductor.org/packages/derfinderHelper): helper functions for derfinder package -- `r getDownloads('derfinderHelper')` downloads. [derfinderData](bioconductor.org/packages/derfinderData): data for derfinder examples -- `r getDownloads('derfinderData', data = TRUE)` downloads.
+[spatialLIBD](http://bioconductor.org/packages/LIBD): LIBD Visium spatial transcriptomics human pilot data inspector -- `r getDownloads('spatialLIBD')` downloads. [GenomicState](http://bioconductor.org/packages/GenomicState): data for derfinder analyses -- `r getDownloads('GenomicState', data = TRUE)` downloads. [recount](http://bioconductor.org/packages/recount): Explore and download data from the recount project -- `r getDownloads('recount')` downloads. [derfinder](http://bioconductor.org/packages/derfinder): Annotation-agnostic differential expression analysis of RNA-seq data at base-pair resolution via the DER Finder approach -- `r getDownloads('derfinder')` downloads. [derfinderPlot](http://bioconductor.org/packages/derfinderPlot): plotting functions for derfinder results -- `r getDownloads('derfinderPlot')` downloads. [regionReport](http://bioconductor.org/packages/regionReport): Generate HTML or PDF reports for a set of genomic regions or DESeq2/edgeR results -- `r getDownloads('regionReport')` downloads. [derfinderHelper](http://bioconductor.org/packages/derfinderHelper): helper functions for derfinder package -- `r getDownloads('derfinderHelper')` downloads. [derfinderData](http://bioconductor.org/packages/derfinderData): data for derfinder examples -- `r getDownloads('derfinderData', data = TRUE)` downloads.
 
 
 N/A
@@ -317,7 +317,7 @@ Courses, meetings, talks, and posters{data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
 :::aside
-Most recent slides are available via [speakerdeck](www.speakerdeck.com/lcolladotor) or [slideshare](www.slideshare.com/lcolladotor).
+Most recent slides are available via [speakerdeck](http://www.speakerdeck.com/lcolladotor) or [slideshare](http://www.slideshare.com/lcolladotor).
 :::
 
 ```{r 'conf'}
