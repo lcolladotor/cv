@@ -40,8 +40,8 @@ sheet_is_publicly_readable <- TRUE
 PDF_EXPORT <- FALSE
 
 
-CV_PDF_LOC <- "https://github.com/lcolladotor/cv/raw/master/en_CV_lcollado.pdf"
-CV_HTML_LOC <- "https://lcolladotor.github.com/cv/"
+CV_PDF_LOC <- "http://lcolladotor.github.io/cv/latex_version/en_CV_lcollado.pdf"
+CV_HTML_LOC <- "http://lcolladotor.github.io/cv"
 
 
 # A global (gasp) variable that holds all the links that were inserted for
