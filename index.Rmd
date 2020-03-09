@@ -40,7 +40,7 @@ sheet_is_publicly_readable <- TRUE
 PDF_EXPORT <- FALSE
 
 
-CV_PDF_LOC <- "http://lcolladotor.github.io/cv/latex_version/en_CV_lcollado.pdf"
+CV_PDF_LOC <- "http://lcolladotor.github.io/cv/en_CV_lcollado.pdf"
 CV_HTML_LOC <- "http://lcolladotor.github.io/cv"
 
 
