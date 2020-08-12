@@ -221,10 +221,16 @@ Software {data-icon=laptop}
 :::
 
 ```{r 'getDownloads_fun', echo = FALSE}
-getDownloads <- function(pkg, data = FALSE) {
-    if(data) {
+getDownloads <- function(pkg, type = "software") {
+    if(type == "experiment") {
         url <- paste0(
             'https://bioconductor.org/packages/stats/data-experiment/',
+            pkg, '/', pkg, '_stats.tab'
+        )
+        
+    } else if (type == "annotation") {
+        url <- paste0(
+            'https://bioconductor.org/packages/stats/data-annotation/',
             pkg, '/', pkg, '_stats.tab'
         )
         
@@ -253,7 +259,7 @@ getDownloads <- function(pkg, data = FALSE) {
 
 ### Bioconductor: author role
 
-[spatialLIBD](http://bioconductor.org/packages/LIBD): LIBD Visium spatial transcriptomics human pilot data inspector -- `r getDownloads('spatialLIBD')` downloads. [GenomicState](http://bioconductor.org/packages/GenomicState): data for derfinder analyses -- `r getDownloads('GenomicState', data = TRUE)` downloads. [recount](http://bioconductor.org/packages/recount): Explore and download data from the recount project -- `r getDownloads('recount')` downloads. [derfinder](http://bioconductor.org/packages/derfinder): Annotation-agnostic differential expression analysis of RNA-seq data at base-pair resolution via the DER Finder approach -- `r getDownloads('derfinder')` downloads. [derfinderPlot](http://bioconductor.org/packages/derfinderPlot): plotting functions for derfinder results -- `r getDownloads('derfinderPlot')` downloads. [regionReport](http://bioconductor.org/packages/regionReport): Generate HTML or PDF reports for a set of genomic regions or DESeq2/edgeR results -- `r getDownloads('regionReport')` downloads. [derfinderHelper](http://bioconductor.org/packages/derfinderHelper): helper functions for derfinder package -- `r getDownloads('derfinderHelper')` downloads. [derfinderData](http://bioconductor.org/packages/derfinderData): data for derfinder examples -- `r getDownloads('derfinderData', data = TRUE)` downloads.
+[spatialLIBD](http://bioconductor.org/packages/LIBD): LIBD Visium spatial transcriptomics human pilot data inspector -- `r getDownloads('spatialLIBD', type = "experiment")` downloads. [GenomicState](http://bioconductor.org/packages/GenomicState): data for derfinder analyses -- `r getDownloads('GenomicState', type = "annotation")` downloads. [recount](http://bioconductor.org/packages/recount): Explore and download data from the recount project -- `r getDownloads('recount')` downloads. [derfinder](http://bioconductor.org/packages/derfinder): Annotation-agnostic differential expression analysis of RNA-seq data at base-pair resolution via the DER Finder approach -- `r getDownloads('derfinder')` downloads. [derfinderPlot](http://bioconductor.org/packages/derfinderPlot): plotting functions for derfinder results -- `r getDownloads('derfinderPlot')` downloads. [regionReport](http://bioconductor.org/packages/regionReport): Generate HTML or PDF reports for a set of genomic regions or DESeq2/edgeR results -- `r getDownloads('regionReport')` downloads. [derfinderHelper](http://bioconductor.org/packages/derfinderHelper): helper functions for derfinder package -- `r getDownloads('derfinderHelper')` downloads. [derfinderData](http://bioconductor.org/packages/derfinderData): data for derfinder examples -- `r getDownloads('derfinderData', type = "experiment")` downloads.
 
 
 N/A
