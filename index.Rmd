@@ -110,9 +110,7 @@ build_skill_bars(skills)
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). 
-
-The source code is available at [github.com/lcolladotor/cv](https://github.com/lcolladotor/cv) and is powered by [nstrayer/cv](https://github.com/nstrayer/cv).
+Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). The source code is available at [lcolladotor/cv](https://github.com/lcolladotor/cv) and is powered by [nstrayer/cv](https://github.com/nstrayer/cv).
 
 Last updated on `r Sys.Date()`.
 
@@ -129,30 +127,58 @@ print_text_block(text_blocks, 'intro')
 ```
 
 
+Table of Contents {#toc}
+--------------------------------------------------------------------------------
 
-Education {data-icon=graduation-cap data-concise=true}
+1. [Education](#education)
+1. [Research Experience](#research)
+1. [Industry Experience](#industry)
+1. [Funding Secured as (co-)PI](#grants)
+1. [Honors and Awards](#honors)
+1. [Publications](#publications)
+1. [Software](#software)
+1. [Leadership and Service](#leadership)
+1. [Mentoring Experience](#mentoring)
+1. [Teaching Experience](#teaching)
+1. [Courses, Meetings, Talks, and Posters ](#courses)
+1. [Languages](#languages)
+
+<!-- These breaks just force a new page so section doesnt get cut off -->
+<br>
+<br>
+<br>
+
+Education {#education data-icon=graduation-cap data-concise=true} 
 --------------------------------------------------------------------------------
 
 ```{r 'education'}
 print_section(position_data, 'education')
 ```
 
+::: aside
+[Table of Contents](#toc)
+:::
+
 <br>
 <br>
 <br>
 
-Research Experience {data-icon=laptop}
+Research Experience {#research data-icon=laptop} 
 --------------------------------------------------------------------------------
 
 ```{r 'work_research'}
 print_section(position_data, 'research_positions')
 ```
 
+::: aside
+[Table of Contents](#toc)
+:::
+
 <br>
 <br>
 <br>
 
-Industry Experience {data-icon=suitcase}
+Industry Experience {#industry data-icon=suitcase}
 --------------------------------------------------------------------------------
 
 ::: aside
@@ -165,20 +191,46 @@ print_text_block(text_blocks, 'industy_experience_aside')
 print_section(position_data, 'industry_positions')
 ```
 
-Honors and awards {data-icon=medal}
+<br>
+<br>
+<br>
+
+::: aside
+[Table of Contents](#toc)
+:::
+
+Funding Secured as (co-)PI {#grants data-icon=money-bill-wave}
+--------------------------------------------------------------------------------
+
+```{r 'funding'}
+print_section(position_data, 'grants')
+```
+
+::: aside
+[Table of Contents](#toc)
+:::
+
+<br>
+<br>
+<br>
+
+Honors and Awards {#honors data-icon=medal}
 --------------------------------------------------------------------------------
 
 ```{r 'honors'}
 print_section(position_data, 'honors')
 ```
 
-<!-- These breaks just force a new page so section doesnt get cut off -->
+::: aside
+[Table of Contents](#toc)
+:::
+
 <br>
 <br>
 <br>
 
 
-Publications {data-icon=book}
+Publications {#publications data-icon=book}
 --------------------------------------------------------------------------------
 
 :::aside
@@ -203,12 +255,16 @@ position_data$description_1 <-
 print_section(position_data, 'pubs')
 ```
 
+::: aside
+[Table of Contents](#toc)
+:::
+
 <br>
 <br>
 <br>
 
 
-Software {data-icon=laptop}
+Software {#software data-icon=laptop}
 --------------------------------------------------------------------------------
 
 :::aside
@@ -259,25 +315,41 @@ getDownloads <- function(pkg, type = "software") {
 
 ### Bioconductor: author role
 
-[spatialLIBD](http://bioconductor.org/packages/LIBD): LIBD Visium spatial transcriptomics human pilot data inspector -- `r getDownloads('spatialLIBD', type = "experiment")` downloads. [GenomicState](http://bioconductor.org/packages/GenomicState): data for derfinder analyses -- `r getDownloads('GenomicState', type = "annotation")` downloads. [recount](http://bioconductor.org/packages/recount): Explore and download data from the recount project -- `r getDownloads('recount')` downloads. [derfinder](http://bioconductor.org/packages/derfinder): Annotation-agnostic differential expression analysis of RNA-seq data at base-pair resolution via the DER Finder approach -- `r getDownloads('derfinder')` downloads. [derfinderPlot](http://bioconductor.org/packages/derfinderPlot): plotting functions for derfinder results -- `r getDownloads('derfinderPlot')` downloads. [regionReport](http://bioconductor.org/packages/regionReport): Generate HTML or PDF reports for a set of genomic regions or DESeq2/edgeR results -- `r getDownloads('regionReport')` downloads. [derfinderHelper](http://bioconductor.org/packages/derfinderHelper): helper functions for derfinder package -- `r getDownloads('derfinderHelper')` downloads. [derfinderData](http://bioconductor.org/packages/derfinderData): data for derfinder examples -- `r getDownloads('derfinderData', type = "experiment")` downloads.
+[recount3](http://bioconductor.org/packages/recount3): Explore and download data from the recount3 project -- `r getDownloads('recount3')` downloads. [biocthis](http://bioconductor.org/packages/biocthis): Automate package and project setup for Bioconductor packages -- `r getDownloads('biocthis')` downloads. [megadepth](http://bioconductor.org/packages/megadepth): BigWig and BAM related utilities -- `r getDownloads('megadepth')` downloads. [spatialLIBD](http://bioconductor.org/packages/LIBD): LIBD Visium spatial transcriptomics human pilot data inspector -- `r getDownloads('spatialLIBD', type = "experiment")` downloads. [GenomicState](http://bioconductor.org/packages/GenomicState): data for derfinder analyses -- `r getDownloads('GenomicState', type = "annotation")` downloads. [recount](http://bioconductor.org/packages/recount): Explore and download data from the recount2 project -- `r getDownloads('recount')` downloads. [derfinder](http://bioconductor.org/packages/derfinder): Annotation-agnostic differential expression analysis of RNA-seq data at base-pair resolution via the DER Finder approach -- `r getDownloads('derfinder')` downloads. [derfinderPlot](http://bioconductor.org/packages/derfinderPlot): plotting functions for derfinder results -- `r getDownloads('derfinderPlot')` downloads. [regionReport](http://bioconductor.org/packages/regionReport): Generate HTML or PDF reports for a set of genomic regions or DESeq2/edgeR results -- `r getDownloads('regionReport')` downloads. [derfinderHelper](http://bioconductor.org/packages/derfinderHelper): helper functions for derfinder package -- `r getDownloads('derfinderHelper')` downloads. [derfinderData](http://bioconductor.org/packages/derfinderData): data for derfinder examples -- `r getDownloads('derfinderData', type = "experiment")` downloads.
 
 
 N/A
 
-2014 - 2020
+2014 - 2021
 
 ```{r 'software'}
 print_section(position_data, 'software')
 ```
 
-Leadership and Service {data-icon=book}
+::: aside
+[Table of Contents](#toc)
+:::
+
+<br>
+<br>
+<br>
+
+Leadership and Service {#leadership data-icon=book}
 --------------------------------------------------------------------------------
 
 ```{r 'service'}
 print_section(position_data, 'service')
 ```
 
-Mentoring Experience {data-icon=chalkboard-teacher}
+::: aside
+[Table of Contents](#toc)
+:::
+
+<br>
+<br>
+<br>
+
+Mentoring Experience {#mentoring data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
 
@@ -285,23 +357,15 @@ Mentoring Experience {data-icon=chalkboard-teacher}
 print_section(position_data, 'mentoring')
 ```
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+::: aside
+[Table of Contents](#toc)
+:::
+
 <br>
 <br>
 <br>
 
-Teaching Experience {data-icon=chalkboard-teacher}
+Teaching Experience {#teaching data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
 ::: aside
@@ -314,14 +378,15 @@ print_text_block(text_blocks, 'teaching_experience_aside')
 print_section(position_data, 'teaching')
 ```
 
-<br>
-<br>
-<br>
+::: aside
+[Table of Contents](#toc)
+:::
+
 <br>
 <br>
 <br>
 
-Courses, meetings, talks, and posters{data-icon=chalkboard-teacher}
+Courses, Meetings, Talks, and Posters {#courses data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
 :::aside
@@ -332,13 +397,24 @@ Most recent slides are available via [speakerdeck](http://www.speakerdeck.com/lc
 print_section(position_data, 'conf')
 ```
 
-Languages {data-icon=chalkboard-teacher}
+::: aside
+[Table of Contents](#toc)
+:::
+
+<br>
+<br>
+<br>
+
+Languages {#languages data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
-* Native: Spanish
+* Native: Spanish (Mexico)
 * Bilingual: English
 * Basic: French
 
+::: aside
+[Table of Contents](#toc)
+:::
 
 
 ```{r 'more_pdf_stuff'}
