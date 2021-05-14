@@ -143,11 +143,6 @@ Table of Contents {#toc}
 1. [Courses, Meetings, Talks, and Posters ](#courses)
 1. [Languages](#languages)
 
-<!-- These breaks just force a new page so section doesnt get cut off -->
-<br>
-<br>
-<br>
-
 Education {#education data-icon=graduation-cap data-concise=true} 
 --------------------------------------------------------------------------------
 
