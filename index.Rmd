@@ -263,7 +263,7 @@ Software {#software data-icon=laptop}
 --------------------------------------------------------------------------------
 
 :::aside
-* __all_purpose__: R, Ranked 295/34,440 (top 0.9%) in the US and 1,110/320,722 (top 0.35%) worldwide by [Star Dev](https://stardev.io/developers/lcolladotor) as of May 1st, 2021. Does not take into account contributions at GitHub organizations.
+* __all_purpose__: R, Ranked 311/37,473 (top 0.83%) in the US and 1,132/356,811 (top 0.32%) worldwide by [Star Dev](https://stardev.io/developers/lcolladotor) as of May 9th, 2023. Does not take into account contributions at GitHub organizations.
 * __statistics__: Stata
 * __scripting__: bash
 * __markup__: LaTeX, markdown
