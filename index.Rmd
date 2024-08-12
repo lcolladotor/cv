@@ -78,7 +78,7 @@ Aside
 ================================================================================
 
 
-![avatar](http://lcolladotor.github.io/authors/admin/avatar_hub730ffb954e879fe0ab174cacb839b41_1326712_270x270_fill_lanczos_center_2.png){width=100%}
+![avatar](https://lcolladotor.github.io/authors/admin/avatar_hu61670ae1305c5c407abf5eedc95c7971_127149_270x270_fill_q75_lanczos_center.JPG){width=100%}
 
 ```{r 'fix_dots_pdf_2'}
 # When in export mode the little dots are unaligned, so fix that. 
