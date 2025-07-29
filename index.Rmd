@@ -229,7 +229,7 @@ Publications {#publications data-icon=book}
 --------------------------------------------------------------------------------
 
 :::aside
-$*$ indicates equal contribution, $\dagger$ indicates corresponding author
+$*$ indicates equal contribution, $\dagger$ indicates co-corresponding author
 :::
 
 ```{r 'pubs'}
